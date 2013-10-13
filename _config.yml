@@ -1,11 +1,10 @@
 menu:
-  Home: /
-  Archives: /archives
-
-widgets: 
-- search
-- category
-- tag
+  Blog: /
+  Todo: /todo
+  Feed: /atom.xml
+  Email: mailto:gaodaojing@gmail.com
+  Twitter: https://twitter.com/iirvvin
+  Github: https://github.com/irvvin
 
 excerpt_link: Read More
 
@@ -15,7 +14,7 @@ twitter:
   tweet_count: 5
 
 addthis:
-  enable: true
+  enable: false
   pubid:
   facebook: true
   twitter: true

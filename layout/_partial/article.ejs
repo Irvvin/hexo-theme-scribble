@@ -1,3 +1,11 @@
+<% if (index){ %>
+  <div class="post-entry">
+    <% if (item.layout != 'page'){ %>
+    <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+    <% } %>
+    <%- partial('post/title') %>
+  </div>
+<% } else { %>
 <article class="<%= item.layout %>">
   <% if (item.photos){ %>
     <%- partial('post/gallery') %>
@@ -5,8 +13,7 @@
   <div class="post-content">
     <header>
       <% if (item.layout != 'page'){ %>
-        <div class="icon"></div>
-        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
       <% } %>
       <%- partial('post/title') %>
     </header>
@@ -38,5 +45,6 @@
     </footer>
   </div>
 </article>
+<% } %>
 
 <%- partial('comment') %>
